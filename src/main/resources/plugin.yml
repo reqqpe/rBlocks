@@ -1,0 +1,11 @@
+name: rBlocks
+version: '${project.version}'
+main: my.reqqpe.rblocks.Main
+api-version: '1.16'
+prefix: reqqpe Blocks
+authors: [reqqpe]
+description: https://discord.gg/pRdjksGgf9
+website: https://discord.gg/pRdjksGgf9
+
+commands:
+  rblock:

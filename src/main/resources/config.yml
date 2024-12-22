@@ -1,0 +1,48 @@
+permission:
+  rblock: rblock
+  reload: rblock.reload
+  bypass: rblock.bypass
+  backpack_reset: rblock.backpack_reset
+  database: rblock.database
+
+regions: # Список регионов в которых будет считаться значение
+  - "spawn"
+
+backpack:
+  max_value:
+    blockBreak_max.10: 10
+    blockBreak_max.20: 20
+    blockBreak_max.30: 30
+
+  block_value:
+    DIRT: 1
+    STONE: 2
+
+tools:
+  1: # Айди не имеет значение, может быть любое
+    name: "Алмазная кирка" # Имя предмета используется для проверки на то что в руке
+    material: DIAMOND_PICKAXE # Тип предмета должно быть написано в верхнем регистре
+    model_data: 1
+    blocks: # Блоки которые кирка может ломать(должны ещё быть указаны сверху)
+      - DIRT
+    effects: # Эффекты при взаимодействии с блоками выше
+      SPEED: 2
+
+
+messages:
+  help:
+    - "&f&m-------------------"
+    - "&f/rblock reload"
+    - "&f/rblock backpack_reset <игрок>"
+    - "&f/rblock database_reset <игрок>"
+    - "&f&m-------------------"
+  no-player: "Игрок {player} не найден возможно он оффлайн"
+  no-player-database: "Игрок {player} не найдет в базе данных"
+  reset-local-block: "Локальные блоки игрока {player} были сброшены"
+  no-permission: "У вас нет прав использовать эту команду"
+  no-region: "Это блок не находится в шахте"
+  backpack-full: "Ваш рюкзак переполнен" #Если переполнен
+  backpack-nofull: "Вы получили {amount}" #Если рюкзак не заполнен и есть место пишет сколько добавило - {amount}
+  no-backpack: "У вас нет доступа к рюкзаку"
+  reload: "Плагин был успешно перезагружен"
+  no-pickaxe: "Кажется ты не можешь сломать это. Попробуй купить предмет лучше или же взять в руку" #Если ломают рукой или же не созданным инструментом
